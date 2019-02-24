@@ -1,0 +1,11 @@
+pipeline {
+	agent any
+	stages {
+		stage ('Checkouting code') {
+			steps {
+				cleanWs()
+				checkout scm
+			}
+		}
+	}
+}
